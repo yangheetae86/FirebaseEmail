@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,12 @@
 		C1ACE804246392F100874FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1ACE803246392F100874FC2 /* Assets.xcassets */; };
 		C1ACE807246392F100874FC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1ACE806246392F100874FC2 /* Preview Assets.xcassets */; };
 		C1ACE80A246392F100874FC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1ACE808246392F100874FC2 /* LaunchScreen.storyboard */; };
+		C1ACE8122463956700874FC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1ACE8112463956700874FC2 /* GoogleService-Info.plist */; };
+		ECBBBA1D25E1E540F8D0B868 /* Pods_FirebaseEmail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D64BD196396DAA3B1309CC /* Pods_FirebaseEmail.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36D64BD196396DAA3B1309CC /* Pods_FirebaseEmail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseEmail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1ACE7FA246392F000874FC2 /* FirebaseEmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseEmail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1ACE7FD246392F000874FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1ACE7FF246392F000874FC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		C1ACE806246392F100874FC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C1ACE809246392F100874FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1ACE80B246392F100874FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1ACE8112463956700874FC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D81519A3288FCEC5DCF1B43F /* Pods-FirebaseEmail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseEmail.release.xcconfig"; path = "Target Support Files/Pods-FirebaseEmail/Pods-FirebaseEmail.release.xcconfig"; sourceTree = "<group>"; };
+		D98CC5A934015CF7315AB42E /* Pods-FirebaseEmail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseEmail.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseEmail/Pods-FirebaseEmail.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBBBA1D25E1E540F8D0B868 /* Pods_FirebaseEmail.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		147616D22D900280BA0693E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D98CC5A934015CF7315AB42E /* Pods-FirebaseEmail.debug.xcconfig */,
+				D81519A3288FCEC5DCF1B43F /* Pods-FirebaseEmail.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C1ACE7F1246392F000874FC2 = {
 			isa = PBXGroup;
 			children = (
 				C1ACE7FC246392F000874FC2 /* FirebaseEmail */,
 				C1ACE7FB246392F000874FC2 /* Products */,
+				147616D22D900280BA0693E8 /* Pods */,
+				FFA18C749085A1E5408093F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +80,7 @@
 				C1ACE803246392F100874FC2 /* Assets.xcassets */,
 				C1ACE808246392F100874FC2 /* LaunchScreen.storyboard */,
 				C1ACE80B246392F100874FC2 /* Info.plist */,
+				C1ACE8112463956700874FC2 /* GoogleService-Info.plist */,
 				C1ACE805246392F100874FC2 /* Preview Content */,
 			);
 			path = FirebaseEmail;
@@ -75,6 +94,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		FFA18C749085A1E5408093F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36D64BD196396DAA3B1309CC /* Pods_FirebaseEmail.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C1ACE80E246392F100874FC2 /* Build configuration list for PBXNativeTarget "FirebaseEmail" */;
 			buildPhases = (
+				A7F83378DE1498F67180641D /* [CP] Check Pods Manifest.lock */,
 				C1ACE7F6246392F000874FC2 /* Sources */,
 				C1ACE7F7246392F000874FC2 /* Frameworks */,
 				C1ACE7F8246392F000874FC2 /* Resources */,
+				0A90E7C79187FF4CFA0B5296 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +163,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1ACE80A246392F100874FC2 /* LaunchScreen.storyboard in Resources */,
+				C1ACE8122463956700874FC2 /* GoogleService-Info.plist in Resources */,
 				C1ACE807246392F100874FC2 /* Preview Assets.xcassets in Resources */,
 				C1ACE804246392F100874FC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A90E7C79187FF4CFA0B5296 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseEmail/Pods-FirebaseEmail-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseEmail/Pods-FirebaseEmail-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseEmail/Pods-FirebaseEmail-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7F83378DE1498F67180641D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseEmail-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C1ACE7F6246392F000874FC2 /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		C1ACE80F246392F100874FC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D98CC5A934015CF7315AB42E /* Pods-FirebaseEmail.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +375,7 @@
 		};
 		C1ACE810246392F100874FC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D81519A3288FCEC5DCF1B43F /* Pods-FirebaseEmail.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
